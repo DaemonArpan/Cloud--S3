@@ -22,7 +22,7 @@ jobs:
 
       - name: Upload files to S3
         run: |
-           aws s3 sync Cloud--S3/ s3://${{ secrets.S3_BUCKET }}/Cloud--s3 \
+           aws s3 sync Cloud--S3/ s3://${{ secrets.S3_BUCKET }}/Cloud--s3/ \
             --delete \
             --exclude ".git/*" \
             --exclude ".github/*"
